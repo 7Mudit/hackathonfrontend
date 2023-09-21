@@ -1,5 +1,5 @@
 import { toast } from "react-hot-toast"
-
+import logo from '../../assets/logo.png'
 import rzpLogo from "../../assets/Logo/rzp_logo.png"
 import { resetCart } from "../../slices/cartSlice"
 import { setPaymentLoading } from "../../slices/courseSlice"
@@ -70,9 +70,9 @@ export async function BuyCourse(
       currency: orderResponse.data.data.currency,
       amount: `${orderResponse.data.data.amount}`,
       order_id: orderResponse.data.data.id,
-      name: "StudyNotion",
+      name: "SkillJet",
       description: "Thank you for Purchasing the Course.",
-      image: rzpLogo,
+      image: logo,
       prefill: {
         name: `${user_details.firstName} ${user_details.lastName}`,
         email: user_details.email,
