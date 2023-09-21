@@ -35,10 +35,10 @@ const Navbar = () => {
     <>
       <div className="flex sticky top-[20px] mx-auto z-[1000] flex-row w-[70%] rounded-[10px] shadow-lg bg-white p-4 justify-between items-center">
         {/* logo */}
-        <div className="flex flex-row justify-center items-center gap-3">
+        <Link to='/' className="flex flex-row justify-center items-center gap-3">
           <img src={logo} alt="logo" />
-          <h1 className="font-semibold">Courseway</h1>
-        </div>
+          <h1 className="font-semibold tracking-wide">SkillJet</h1>
+        </Link>
         <div className="flex flex-row gap-5">
           <NavLink to="/" exact>
             Home
