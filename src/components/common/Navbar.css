@@ -1,3 +1,6 @@
 .active{
     color: #FE794F;
 }
+.customFont{
+    font-family: 'Lobster', cursive;
+}

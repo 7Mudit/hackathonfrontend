@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex flex-row justify-between items-center">
         <div className="flex gap-2 self-start">
           <img src={logo} alt="" />
-          <h2 className="text-white text-[30px] tracking-wider font-bold">SkillJet</h2>
+          <h2 className="text-white text-[30px] tracking-wider customFont font-bold">SkillJet</h2>
         </div>
         <div className="flex flex-col gap-5">
           <h2 className="text-white font-bold">LINKS</h2>

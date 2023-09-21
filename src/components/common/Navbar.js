@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* logo */}
         <Link to='/' className="flex flex-row justify-center items-center gap-3">
           <img src={logo} alt="logo" />
-          <h1 className="font-semibold text-[30px] tracking-wider">SkillJet</h1>
+          <h1 className="font-semibold customFont text-[30px] tracking-wider">SkillJet</h1>
         </Link>
         <div className="flex flex-row gap-5">
           <NavLink to="/" exact>

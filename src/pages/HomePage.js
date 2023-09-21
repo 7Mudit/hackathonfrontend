@@ -9,6 +9,7 @@ import Courses from "../components/Homepage/Courses";
 import arrow from "../assets/arrow.svg";
 import women from "../assets/women.png";
 import Footer from "../components/common/Footer";
+import Degrees from "../components/Homepage/Degrees";
 
 const HomePage = () => {
   return (
@@ -54,6 +55,34 @@ const HomePage = () => {
         </p>
 
         <Categories />
+      </div>
+      {/* degree section */}
+      <div className="flex flex-col items-center relative justify-center  gap-5  ">
+        <div className="flex flex-col  items-center">
+          <h4 className="font-semibold text-lg font-sans">#Degrees</h4>
+          <img
+            src={line}
+            alt="line"
+            className="w-[150px] h-[10px] object-cover"
+          />
+        </div>
+        <div className="relative">
+          <h1 className="text-[40px]">
+            Explore Top{" "}
+            <span className="text-[#FF852C] font-bold">Degrees</span>
+          </h1>
+          <img
+            src={abstract}
+            className="absolute left-[90%] object-cover bottom-12"
+            alt=""
+          />
+        </div>
+
+        <p className="w-[60%] text-center mx-auto">
+        Breakthrough pricing on 100% online degrees from top universities.
+        </p>
+
+        <Degrees/>
       </div>
       {/* third section starts */}
       <div className="flex flex-col items-center relative justify-center  gap-5  ">
