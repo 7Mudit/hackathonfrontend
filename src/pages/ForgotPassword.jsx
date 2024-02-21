@@ -18,7 +18,7 @@ function ForgotPassword() {
   };
 
   return (
-    <>
+    <div className="bg-black">
       <Navbar  />
       <div className="grid min-h-screen max-h-max py-[204px] bg-black place-items-center">
         {loading ? (
@@ -70,7 +70,7 @@ function ForgotPassword() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

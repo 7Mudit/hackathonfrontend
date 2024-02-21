@@ -35,7 +35,7 @@ function UpdatePassword() {
   }
 
   return (
-    <>
+    <div className="bg-black">
       <Navbar theme={'dark'} />
     <div className="grid bg-black min-h-screen max-h-max place-items-center">
       {loading ? (
@@ -121,7 +121,7 @@ function UpdatePassword() {
         </div>
       )}
     </div>
-    </>
+    </div>
   )
 }
 

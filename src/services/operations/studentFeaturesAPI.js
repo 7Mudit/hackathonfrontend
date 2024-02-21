@@ -35,6 +35,7 @@ export async function BuyCourse(
   navigate,
   dispatch
 ) {
+  console.log("buying course")
   const toastId = toast.loading("Loading...")
   try {
     // Loading the script of Razorpay SDK
@@ -66,15 +67,16 @@ export async function BuyCourse(
 
     // Opening the Razorpay SDK
     const options = {
-      key: process.env.RAZORPAY_KEY,
+      key: 'rzp_test_pd3GK4IV5BXnvd',
       currency: orderResponse.data.data.currency,
       amount: `${orderResponse.data.data.amount}`,
       order_id: orderResponse.data.data.id,
       name: "SkillJet",
       description: "Thank you for Purchasing the Course.",
-      image: logo,
+      image: rzpLogo,
       prefill: {
-        name: `${user_details.firstName} ${user_details.lastName}`,
+        // name: `${user_details.firstName} ${user_details.lastName}`,
+        name : "Mudit",
         email: user_details.email,
       },
       handler: function (response) {
@@ -82,6 +84,7 @@ export async function BuyCourse(
         verifyPayment({ ...response, courses }, token, navigate, dispatch)
       },
     }
+    console.log("Razorpay Initiation Options:", options);
     const paymentObject = new window.Razorpay(options)
 
     paymentObject.open()
@@ -98,6 +101,7 @@ export async function BuyCourse(
 
 // Verify the Payment
 async function verifyPayment(bodyData, token, navigate, dispatch) {
+  console.log("verify payment")
   const toastId = toast.loading("Verifying Payment...")
   dispatch(setPaymentLoading(true))
   try {

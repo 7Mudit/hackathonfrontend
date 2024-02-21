@@ -112,3 +112,47 @@ html{
       transform: rotate(360deg);
     }
   }
+
+
+  .rotating-image {
+    --circle-radius: 50px;
+    animation: rotateAround 40s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+  
+  @keyframes rotateAround {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translate(var(--circle-radius)) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(1turn) translate(var(--circle-radius)) rotate(-1turn);
+    }
+  }
+
+  .background-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-image: url('https://websitev3-p-eu.figstatic.com/assets-v3/02b392b689124cc69efac5b146e8830cb64b85f6/static/media/backgroundImage.9c58d4fb.jpg');
+    background-size: 130% 100%; /* Ensure the image is large enough to cover the container diagonally */
+    background-position: 0 0;
+    animation: scrollDiagonal 20s alternate-reverse infinite;
+    object-fit: cover;
+
+    
+  }
+  
+  @keyframes scrollDiagonal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 90% 60%; /* Adjust the position diagonally */
+    }
+  }
+  

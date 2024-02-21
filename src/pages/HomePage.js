@@ -13,7 +13,7 @@ import Degrees from "../components/Homepage/Degrees";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-[100px] ">
+    <div className="flex flex-col gap-[100px]">
       {/* first section starts */}
       <div className="flex flex-col gap-5 bg-[#F6F6EE] p-5 h-screen w-screen">
         <h5 className="text-center">
